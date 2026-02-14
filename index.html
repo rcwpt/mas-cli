@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAS CLI - Windows Activation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            padding: 40px;
+            max-width: 700px;
+            width: 90%;
+        }
+        
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        
+        .section {
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .section h2 {
+            color: #667eea;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        
+        .code-block {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            margin: 10px 0;
+            position: relative;
+        }
+        
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: background 0.3s;
+        }
+        
+        .copy-btn:hover {
+            background: #764ba2;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            color: #856404;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+        }
+        
+        .info {
+            background: #d1ecf1;
+            border: 1px solid #0c5460;
+            color: #0c5460;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+        }
+        
+        ol, ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #999;
+            font-size: 12px;
+        }
+        
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔐 MAS CLI - Windows Activation</h1>
+        <p class="subtitle">One-line Windows & Office Activation Tool</p>
+        
+        <div class="section">
+            <h2>⚡ Quick Start</h2>
+            <p>Copy and paste this command in <strong>PowerShell (Admin)</strong>:</p>
+            <div class="code-block">
+                <button class="copy-btn" onclick="copyCode('cmd1')">COPY</button>
+                <code id="cmd1">powershell -Command "irm https://rcwpt.github.io/mas-cli/mas-cli.ps1 | iex"</code>
+            </div>
+            
+            <div class="info">
+                <strong>💡 Tip:</strong> Open PowerShell as Administrator before running the command
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>📋 Syarat & Ketentuan</h2>
+            <ul>
+                <li>Windows 7 atau lebih baru</li>
+                <li>PowerShell 3.0 atau lebih baru</li>
+                <li>Jalankan sebagai Administrator</li>
+                <li>Disable antivirus sementara jika terjadi masalah</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>🚀 Cara Penggunaan</h2>
+            <ol>
+                <li>Buka <strong>PowerShell</strong> sebagai Administrator</li>
+                <li>Copy command di atas dan paste ke PowerShell</li>
+                <li>Tekan Enter dan tunggu proses selesai</li>
+                <li>Ikuti instruksi yang muncul di layar</li>
+            </ol>
+        </div>
+        
+        <div class="section">
+            <h2>❓ Troubleshooting</h2>
+            <ul>
+                <li><strong>Script tidak jalan?</strong> Pastikan PowerShell dijalankan sebagai Admin</li>
+                <li><strong>Antivirus memblokir?</strong> Disable sementara atau tambahkan whitelist</li>
+                <li><strong>Error message?</strong> Cek connection internet Anda</li>
+                <li><strong>Masih error?</strong> Coba alternative batch script di bawah</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>🔄 Alternative Command (CMD)</h2>
+            <p>Jika PowerShell bermasalah, gunakan Command Prompt:</p>
+            <div class="code-block">
+                <button class="copy-btn" onclick="copyCode('cmd2')">COPY</button>
+                <code id="cmd2">cmd /c "curl -L https://rcwpt.github.io/mas-cli/mas-cli.cmd | cmd"</code>
+            </div>
+        </div>
+        
+        <div class="warning">
+            ⚠️ <strong>Disclaimer:</strong> Tool ini untuk keperluan legal saja. Pastikan Anda memiliki lisensi Windows yang valid sebelum menggunakan tool ini. Gunakan dengan tanggung jawab penuh.
+        </div>
+        
+        <div class="section">
+            <h2>📚 Resources</h2>
+            <ul>
+                <li><a href="https://github.com/rcwpt/mas-cli" target="_blank">GitHub Repository</a></li>
+                <li><a href="https://massgrave.dev" target="_blank">MassGrave - Official Website</a></li>
+                <li><a href="https://github.com/massgravel/Microsoft-Activation-Scripts" target="_blank">Original Source Code</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer">
+            <p>Made with ❤️ by <a href="https://github.com/rcwpt" target="_blank">rcwpt</a></p>
+            <p>© 2026 | Based on <a href="https://massgrave.dev" target="_blank">MassGrave</a></p>
+        </div>
+    </div>
+    
+    <script>
+        function copyCode(id) {
+            const code = document.getElementById(id).innerText;
+            navigator.clipboard.writeText(code).then(() => {
+                alert('Command copied to clipboard!');
+            });
+        }
+    </script>
+</body>
+</html>
